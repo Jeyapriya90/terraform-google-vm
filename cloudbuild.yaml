@@ -5,9 +5,11 @@ steps:
   args: 
   - '-c'
   - | 
+        pwd
         ls -lrt
         df -h
-        cd /examples/compute_instance/simple/
+        cd /workspace/examples/compute_instance/simple/
+        pwd
         terraform init
         terraform validate
         terraform plan -out terraform.plan
