@@ -1,20 +1,11 @@
 steps:
-- id: 'tf plan'
-  name: 'hashicorp/terraform:1.0.0'
-  entrypoint: 'sh'  
-  args: 
-  - '-c'
-  - | 
-      echo "***********************"
-      echo "$BRANCH_NAME"
-      echo "***********************"
 - id: 'tf init'
   name: 'hashicorp/terraform:1.0.0'
   entrypoint: 'sh'
   args: 
   - '-c'
   - |
-      if [ ! -z "$BRANCH_NAME" ]; then
+      if [ -d "$BRANCH_NAME" ]; then
         cd terraform-google-vm/examples/compute_instance/simple/
         echo "run init"
         terraform init
