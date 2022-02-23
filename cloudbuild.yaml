@@ -5,8 +5,7 @@ steps:
   args: 
   - '-c'
   - |
-      if [ -d "$BRANCH_NAME" ]; then
-        cd /home/jeya_priya_c/terraform-google-vm/examples/compute_instance/simple
+        cd terraform-google-vm/examples/compute_instance/simple
         echo "run init"
         terraform init
         echo "run validate"
@@ -14,7 +13,4 @@ steps:
         echo "run plan"
         terraform plan -out terraform.plan
         terraform apply terraform.plan
-      else
-        echo "do nothing"
-      fi 
-      
+     
