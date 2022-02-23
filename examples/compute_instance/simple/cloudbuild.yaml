@@ -6,15 +6,15 @@ steps:
   - '-c'
   - |
       if [ -d "$BRANCH_NAME" ]; then
-      cd terraform-google-vm/examples/compute_instance/simple/
-      echo "run init"
-      terraform init
-      echo "run validate"
-      terraform validate
-      echo "run plan"
-      terraform plan -out terraform.plan
-      terraform apply terraform.plan
+        cd terraform-google-vm/examples/compute_instance/simple/
+        echo "run init"
+        terraform init
+        echo "run validate"
+        terraform validate
+        echo "run plan"
+        terraform plan -out terraform.plan
+        terraform apply terraform.plan
       else
-      echo "do nothing"
+        echo "do nothing"
       fi 
       
