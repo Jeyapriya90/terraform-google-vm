@@ -5,7 +5,7 @@ steps:
   args: 
   - '-c'
   - | 
-        pwd
+        dir
         cd /home/jeya_priya_c/terraform-google-vm/examples/compute_instance/simple/
         terraform init
         terraform validate
