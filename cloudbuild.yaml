@@ -5,12 +5,10 @@ steps:
   args: 
   - '-c'
   - |
-        cd /home/jeya_priya_c/terraform-google-vm/examples/compute_instance/simple
-        echo "run init"
+        cd terraform-google-vm/examples/compute_instance/simple/
         terraform init
-        echo "run validate"
         terraform validate
-        echo "run plan"
         terraform plan -out terraform.plan
         terraform apply terraform.plan
+     
      
