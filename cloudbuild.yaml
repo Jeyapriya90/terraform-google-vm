@@ -4,8 +4,9 @@ steps:
   entrypoint: 'sh'
   args: 
   - '-c'
-  - |
-        cd Jeyapriya90/terraform-google-vm/examples/compute_instance/simple/
+  - | 
+        pwd
+        cd /home/jeya_priya_c/terraform-google-vm/examples/compute_instance/simple/
         terraform init
         terraform validate
         terraform plan -out terraform.plan
