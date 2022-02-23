@@ -25,6 +25,5 @@ steps:
 	terraform apply terraform.plan
       else
         echo "do nothing"
-   
       fi 
       
